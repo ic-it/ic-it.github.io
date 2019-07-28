@@ -169,8 +169,42 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
     /*align-items: center;*/
     margin: 40px 0 0;
+
 }
 
 
+/*list*/
+.list {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    margin: 100px 0;
+    align-items: center;
+}
+
+
+
+
+.list__content {
+    color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 24px;
+}
+
+
+
+
+/*==============footer=================*/
+.footer {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    margin: 50px 0 0;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
 
 
