@@ -250,7 +250,7 @@ h1,h2,h3,h4,h5,h6{
     width: 350px;
     height: 640px;
     background-color: #000;
-    transform: rotate(-30deg) skew(25deg) scale(.8);
+    transform: rotate(-30deg) skew(25deg) scale(.7);
     transition: 0.5s;
 
 }
