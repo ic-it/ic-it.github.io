@@ -143,6 +143,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     background-color: #000;
     margin: 100px 0;
+    align-items: center;
 
 }
 
@@ -150,7 +151,7 @@ h1,h2,h3,h4,h5,h6{
     text-transform: uppercase;
     margin: 50px 0 30px;
     font-size: 56px;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 
@@ -159,13 +160,13 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 41px;
-    align-items: center;
+    /*align-items: center;*/
 
 }
 
 .features__icon{
     margin-bottom: 20px;
-    align-items: center;
+    /*align-items: center;*/
     margin: 40px 0 0;
 }
 
