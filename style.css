@@ -197,7 +197,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     text-transform: uppercase;
     justify-content: center;
-    margin: 50px 0 30px;
+    margin: 50px 0 30px 0;
     font-size: 56px;
     background-color: #000;
     margin: 100px 0 0;
@@ -226,5 +226,65 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Libre Franklin', sans-serif;
     font-size: 20px;
 }
+
+
+/*#DOBJECT*/
+
+
+.object{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #000;
+}
+
+
+.object__content{
+    position: relative;
+    margin: 8%;
+    width: 350px;
+    height: 640px;
+    background-color: #000;
+    transform: rotate(-30deg) skew(25deg) scale(.8);
+    transition: 0.5s;
+
+}
+
+.object__content img{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.object__content:hover img:nth-child(4){
+    transform: translate(160px, -160px);
+    opacity: 1;
+}
+.object__content:hover img:nth-child(3){
+    transform: translate(120px, -120px);
+    opacity: .8;
+}
+.object__content:hover img:nth-child(2){
+    transform: translate(80px, -80px);
+    opacity: .6;
+}
+.object__content:hover img:nth-child(1){
+    transform: translate(40px, -40px);
+    opacity: .4;
+}
+
+
+
+
+
+
+
+
+
 
 
