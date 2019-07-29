@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6{
 .nav img{
     margin-left: 50px;
 }
-.nav__link img:last-child{
+.nav__link last-child{
     margin-right: 20px;
 }
 
