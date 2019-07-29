@@ -33,8 +33,9 @@ function scrollDown() {
                     <img src='img/ico.png' class='header__ico'>
                 </div>
                 <nav class="nav">
-                    <a class='nav__link' href="#">steam</a>
+                    <img src="img/insta.png" alt="">
                     <a class='nav__link' href="#">telegram</a>
+                    <img src="img/tlg.png" alt="">
                     <a class='nav__link' href="#">instagram</a>
                 </nav>
             </div>
@@ -44,7 +45,7 @@ function scrollDown() {
    <div class="conteiner">
         <div class="intro__inner">
             <h1 class="intro__title">
-                WELCOME TO MY repository
+                WELCOME TO MY BLOG
             </h1>
             <a href="#" class="btn btn--red" onclick="scrollDown()">learn more</a>
         </div>
@@ -131,7 +132,7 @@ function scrollDown() {
      var i = 0;
      while (i != c){
         console.log(data[i].name);
-         document.getElementById('url').innerHTML += data[i].html_url + "<p></p>";
+         document.getElementById('url').innerHTML += data[i].url + "<p></p>";
         i = i+1;
 
      };

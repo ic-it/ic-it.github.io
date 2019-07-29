@@ -56,8 +56,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .nav__link {
-    margin-left: 50px;
-
+    margin-left: 10px;
     color: #fff;
     text-decoration: none;
     opacity: .75;
@@ -65,11 +64,14 @@ h1,h2,h3,h4,h5,h6{
     transition: opacity .2s linear;
 }
 
-.nav__link:last-child{
+.nav img{
+    margin-left: 50px;
+}
+.nav__link img:last-child{
     margin-right: 20px;
 }
 
-.nav__link:first-child{
+.nav__link img:first-child{
     margin-left: 0;
 }
 
