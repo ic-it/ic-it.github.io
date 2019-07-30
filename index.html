@@ -37,7 +37,9 @@ function theme() {
         document.getElementById('intro__title').style.color = '#000';
         document.getElementById('features').style.backgroundColor = '#fff';
         document.getElementById('features').style.color = '#000';
-
+        document.getElementById('night').style.color = '#000';
+        document.getElementById('light').style.color = '#000';
+        document.getElementById('object').style.backgroundColor = '#fff';
 
 
 
@@ -76,8 +78,9 @@ function theme() {
         document.getElementById('intro__title').style.color = '#fff';
         document.getElementById('features').style.backgroundColor = '#000';
         document.getElementById('features').style.color = '#fff';
-
-
+        document.getElementById('night').style.color = '#fff';
+        document.getElementById('light').style.color = '#fff';
+        document.getElementById('object').style.backgroundColor = '#000';
 
 
         var ava = document.getElementById('fire');
@@ -172,13 +175,10 @@ function scrollDown() {
                 <div class="header__logo">
                     <img src='img/ico.png' class='header__ico' id='header__ico'>
                 </div>
-
-                <div>
-                    <p>Night/light</p>
-                    <label class="switch">
-                      <input type="checkbox" onclick="theme()" id='one'>
-                      <span class="slider round"></span>
-                    </label>
+                <div class='theme'>
+                    <p id='night'>night</p>
+                    <input type="checkbox" onclick="theme()" id='one'>
+                    <p id='light'>light</p>
                 </div>
 
                 <nav class="nav" id='nav'>
@@ -236,7 +236,7 @@ function scrollDown() {
 
 <div class="list__title">Learn and use my project</div>
 
-<div class="object">
+<div class="object" id='object'>
 
     <div class="object__content">
 
