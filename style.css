@@ -207,13 +207,17 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-.list__content {
-    margin: 0 20px;
+.list__name {
+    margin: 20px 20px 0 0;
+    text-decoration: none;
     color: #fff;
-    font-family: 'Libre Franklin', sans-serif;
+    /*font-family: 'Libre Franklin', sans-serif;*/
     font-size: 24px;
 }
 
+.list__name:hover{
+    opacity: 70;
+}
 
 
 
@@ -352,6 +356,10 @@ input:checked[type="checkbox"]::before {
 
 }
 
+.betw {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 

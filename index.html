@@ -146,17 +146,16 @@ function scrollDown() {
      var i = 0;
      while (i != c){
         console.log(data[i].name);
-         document.getElementById('name').innerHTML += data[i].name + "<p></p>";
+        document.getElementById('list').innerHTML += "<a href='" + data[i].html_url + "' class='list__name'><div class='betw'><h4 class='list__name'>" + data[i].name + "</h4>" + "<h4 class='list__name'>" + data[i].html_url + "</h4></div> </a>";
         i = i+1;
 
      };
-     var i = 0;
-     while (i != c){
-        console.log(data[i].name);
-         document.getElementById('url').innerHTML += data[i].html_url + "<p></p>";
-        i = i+1;
+     // var i = 0;
+     // while (i != c){
+     //    console.log(data[i].name);
+     //    i = i+1;
 
-     };
+     // };
  });
 
 
@@ -263,10 +262,7 @@ function scrollDown() {
 
 <div style="background-color: #000">
 <div class="list__title">My projects</div>
-<div style="height: 100px"></div>
-<div class="list">
-    <div id="name" class="list__content"></div>
-    <div id="url" class="list__content"></div>
+<div id="list"></div>
 </div>
 </div>
 
