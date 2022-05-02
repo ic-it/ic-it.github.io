@@ -1,5 +1,6 @@
 
 .body {
+    display: grid;
     font-family: 'Comfortaa', cursive;
     background-color: #2e3440;
     color: #d8dee9;
@@ -7,12 +8,14 @@
 }
 
 .h1 {
-    font-size: 65px;
+    /* font-size: 65px; */
+    font-size: 4em;
     text-align: center;
 }
 
 .bio {
-    font-size: 45px;
+    font-size: 2em;
+    /* font-size: 45px; */
     text-align: center;
 }
 
@@ -27,9 +30,14 @@
     transition: 1s;
 }
 
-.container {
+.container-projects {
+    margin-top: 20px;
     width: 100%;
     text-align: center;
+}
+
+.container-projects>a {
+    text-decoration: none;
 }
 
 .container-social {
@@ -52,14 +60,77 @@
     text-decoration: none;
 }
 
-.container>a {
-    text-decoration: none;
-}
-
-
 .social {
     width: 70px;
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+nav {
+
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 200px; */
+    text-align: center;
+    transition: 1s;
+
+
+    background-color: #3b4252;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 2em;
+}
+
+nav>a {
+    color: #a3be8c;
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+}
+
+nav>a:hover {
+    text-decoration: none;
+}
+
+
+
+.container {
+    /* margin-top: 1em; */
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #ebcb8b;
+}
+
+.container a {
+    font-size: 0.9em;
+    text-align: center;
+    width: 100px;
+    color: #bf616a;
+}
+
+.container a:hover {
+    text-decoration: none;
+}
+
+.container>div {
+    flex: 1 0 10%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 1em;
+    margin-top: 2em;
+    min-width: 300px;
+    max-width: 100%;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 33px;
+}
+
+
+
+.container ul {
+    list-style-type: square;
+} 
