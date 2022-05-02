@@ -20,10 +20,11 @@
 .avatar {
     width: 200px;
     height: 200px;
-    background-image: url("main_ava.jpg");
+    background-image: url("icons/avatar.png");
     background-size: cover;
     border-radius: 50%;
     margin: auto;
+    transition: 1s;
 }
 
 .container {
@@ -36,10 +37,19 @@
     margin-right: auto;
     max-width: 200px;
     text-align: center;
+    transition: 1s;
+
+
     background-color: #3b4252;
-    /* background-color: #434c5e; */
     border-radius: 20px;
     padding: 10px;
+}
+
+.container-social:hover {
+    box-shadow: 10px 10px #434c5e;
+}
+.container-social>a {
+    text-decoration: none;
 }
 
 .container>a {
