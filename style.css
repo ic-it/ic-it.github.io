@@ -18,8 +18,8 @@
 
 
 .avatar {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     background-image: url("main_ava.jpg");
     background-size: cover;
     border-radius: 50%;
@@ -31,12 +31,16 @@
     text-align: center;
 }
 
-/* .container-social {
+.container-social {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
     text-align: center;
-    background-color: #4c566a;
+    background-color: #3b4252;
+    /* background-color: #434c5e; */
     border-radius: 20px;
     padding: 10px;
-} */
+}
 
 .container>a {
     text-decoration: none;
@@ -44,8 +48,8 @@
 
 
 .social {
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
