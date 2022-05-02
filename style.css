@@ -8,21 +8,15 @@
 }
 
 .h1 {
-    /* font-size: 65px; */
-    font-size: 4em;
     text-align: center;
 }
 
 .bio {
-    font-size: 2em;
-    /* font-size: 45px; */
     text-align: center;
 }
 
 
 .avatar {
-    width: 200px;
-    height: 200px;
     background-image: url("icons/avatar.png");
     background-size: cover;
     border-radius: 50%;
@@ -61,8 +55,6 @@
 }
 
 .social {
-    width: 70px;
-    height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -87,7 +79,6 @@ nav>a {
     color: #a3be8c;
     display: inline-block;
     text-align: center;
-    font-size: 2em;
 }
 
 nav>a:hover {
@@ -125,12 +116,73 @@ nav>a:hover {
     margin-top: 2em;
     min-width: 300px;
     max-width: 100%;
-    font-family: 'Smooch Sans', sans-serif;
     font-size: 33px;
 }
 
 
+@media screen and (min-width: 675px) {
+    .container>div {
+        font-size: 33px;
+    }
+
+    .h1 {
+        font-size: 4em;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bio {
+        font-size: 2em;
+    }
+
+    .social {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 674px) {
+    .container {
+        /* margin-left: 50px; */
+    }
+
+    .container>div {
+        font-size: 20px;
+    }
+
+    .h1 {
+        font-size: 2em;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bio {
+        font-size: 1em;
+    }
+    
+    .social {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+}
 
 .container ul {
     list-style-type: square;
 } 
+
+
+
