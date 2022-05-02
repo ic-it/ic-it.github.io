@@ -18,8 +18,8 @@
 
 
 .avatar {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-image: url("main_ava.jpg");
     background-size: cover;
     border-radius: 50%;
@@ -31,18 +31,14 @@
     text-align: center;
 }
 
-.container-social {
-    /* width: 100%; */
+/* .container-social {
     text-align: center;
     background-color: #4c566a;
     border-radius: 20px;
     padding: 10px;
-}
+} */
 
 .container>a {
-    text-decoration: none;
-}
-.container-social>a {
     text-decoration: none;
 }
 
