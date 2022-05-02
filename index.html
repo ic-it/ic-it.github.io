@@ -2,278 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no">
-    <title>DrogiBlog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ic_it</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body id='body'>
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-
-<script>
-function theme() {
-
-    var chbox;
-    chbox=document.getElementById('one');
-
-    if (chbox.checked) {
-        document.getElementById('body').style.backgroundColor = '#000';
-        document.getElementById('body').style.color = '#fff';
-        document.getElementById('nav__link_tlg').style.color = '#000';
-        //document.getElementById('nav__link_insta').style.color = '#000';
-        document.getElementById('intro').style.backgroundColor = '#fff';
-        document.getElementById('btn').style.backgroundColor = '#fff';
-        document.getElementById('btn').style.color = '#000';
-        document.getElementById('btn').style.border = '3px solid #000';
-        document.getElementById('intro__title').style.color = '#000';
-        document.getElementById('intro__title').style.color = '#000';
-        document.getElementById('features').style.backgroundColor = '#fff';
-        document.getElementById('features').style.color = '#000';
-        document.getElementById('night').style.color = '#000';
-        document.getElementById('light').style.color = '#000';
-        document.getElementById('object').style.backgroundColor = '#fff';
-
-
-
-        var ava = document.getElementById('fire');
-        ava.setAttribute('src','img/fire_night.png');
-
-        var ava = document.getElementById('load');
-        ava.setAttribute('src','img/load_night.png');
-
-        var ava = document.getElementById('Share');
-        ava.setAttribute('src','img/Share_night.png');
-
-
-
-
-
-        var ava = document.getElementById('header__ico');
-        ava.setAttribute('src','img/ico_night.png');
-
-        var ava = document.getElementById('tlg');
-        ava.setAttribute('src','img/tlg_night.png');
-
-        var ava = document.getElementById('insta');
-        ava.setAttribute('src','img/insta_night.png');
-    }
-    else {
-        document.getElementById('body').style.backgroundColor = '#fff';
-        document.getElementById('body').style.color = '#fff';
-        document.getElementById('nav__link_tlg').style.color = '#fff';
-        //document.getElementById('nav__link_insta').style.color = '#fff';
-        document.getElementById('intro').style.backgroundColor = '#000';
-        document.getElementById('btn').style.backgroundColor = '#000';
-        document.getElementById('btn').style.color = '#fff';
-        document.getElementById('btn').style.border = '3px solid #fff';
-        document.getElementById('intro__title').style.color = '#fff';
-        document.getElementById('intro__title').style.color = '#fff';
-        document.getElementById('features').style.backgroundColor = '#000';
-        document.getElementById('features').style.color = '#fff';
-        document.getElementById('night').style.color = '#fff';
-        document.getElementById('light').style.color = '#fff';
-        document.getElementById('object').style.backgroundColor = '#000';
-
-
-        var ava = document.getElementById('fire');
-        ava.setAttribute('src','img/fire.png');
-
-        var ava = document.getElementById('load');
-        ava.setAttribute('src','img/load.png');
-
-        var ava = document.getElementById('Share');
-        ava.setAttribute('src','img/Share.png');
-
-
-
-
-
-        var ava = document.getElementById('header__ico');
-        ava.setAttribute('src','img/ico.png');
-
-        var ava = document.getElementById('tlg');
-        ava.setAttribute('src','img/tlg.png');
-
-        var ava = document.getElementById('insta');
-        ava.setAttribute('src','img/insta.png');
-    }
-
-
-
-
-};
-
-
-</script>
-
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<!-- ================================================================================================-->
-<script>
-function scrollDown() {
-    var windowCoords = document.documentElement.clientHeight;
-    (function scroll() {
-      if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 10);
-        setTimeout(scroll, 0);
-      }
-      if (window.pageYOffset > windowCoords) {
-        window.scrollTo(0, windowCoords);
-      }
-    })();
-  }
-</script>
-
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
-
-<script>
-     $.getJSON("https://api.github.com/users/drogi17/repos?per_page=1000", function(data){
-     console.log(data.length);
-     var c = data.length;
-     var i = 0;
-     while (i != c){
-        console.log(data[i].name);
-        document.getElementById('list').innerHTML += "<a href='" + data[i].html_url + "' class='list__name'><div class='betw'><h4 class='list__name'>" + data[i].name + "</h4>" + "<h4 class='list__name'>" + data[i].html_url + "</h4></div> </a>";
-        i = i+1;
-
-     };
-     // var i = 0;
-     // while (i != c){
-     //    console.log(data[i].name);
-     //    i = i+1;
-
-     // };
- });
-
-
-
-
-</script>
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
- <!-- ================================================================================================-->
-
-
-
-    <header class="header">
-        <div class="conteiner">
-            <div class="header__inner">
-                <div class="header__logo">
-                    <img src='img/ico.png' class='header__ico' id='header__ico'>
-                </div>
-                <div class='theme'>
-                    <p id='night'>night</p>
-                    <input type="checkbox" onclick="theme()" id='one'>
-                    <p id='light'>light</p>
-                </div>
-
-                <nav class="nav" id='nav'>
-                    <img src="img/tlg.png" alt="" id='tlg'>
-                    <a class='nav__link' href="https://t.me/ic_it" id='nav__link_tlg'>telegram</a>
-                    <!--<img src="img/insta.png" alt="" id='insta'>
-                    <a class='nav__link' href="#" id='nav__link_insta'>instagram</a>-->
-                </nav>
-            </div>
-        </div>
-    </header>
-<div class="intro" id='intro'>
-   <div class="conteiner">
-        <div class="intro__inner">
-            <h1 class="intro__title" id='intro__title'>
-                WELCOME TO MY repository
-            </h1>
-            <a href="#" class="btn btn--red" onclick="scrollDown()" id='btn'>learn more</a>
-        </div>
+<body class="body">
+    <h1 class="h1">
+        ic_it
+    </h1>
+    <img src="https://avatars.githubusercontent.com/u/38162697?v=4" class="avatar">
+    <p class="bio">
+        Student and Python Developer
+    </p>
+    <div class="container-social">
+        <a href="https://github.com/ic-it" target="blank">
+            <img class="social" src="icons/github.png" alt="github">
+        </a>
+        <a href="https://t.me/ic_it" target="blank">
+            <img class="social" src="icons/telegram.png" alt="telegram">
+        </a>
     </div>
-</div>
-
-
-
-<div class="conteiner">
-   <div class="features" id='features'>
-       <div class="features__item">
-           <img class="features__icon" src="img/fire.png" alt="" id='fire'>
-           <h4 class="features__title">new</h4>
-           <div class="features__text">
-              New interesting chips on my repository.
-           </div>
-       </div>
-       <div class="features__item">
-           <img class="features__icon" src="img/load.png" alt="" id='load'>
-           <h4 class="features__title">LOAD</h4>
-           <div class="features__text">
-              Download my projects. And use them.
-
-           </div>
-
-       </div>
-       <div class="features__item">
-           <img class="features__icon" src="img/Share.png" alt="" id='Share'>
-           <h4 class="features__title">Share</h4>
-           <div class="features__text">
-               Tell friends and share projects with them.
-           </div>
-
-
-       </div>
-   </div>
-
-</div>
-
-<div class="list__title">Learn and use my project</div>
-
-<div class="object" id='object'>
-
-    <div class="object__content">
-
-        <img src="img/img.jpg" alt="">
-        <img src="img/img.jpg" alt="">
-        <img src="img/img.jpg" alt="">
-        <img src="img/img.jpg" alt="">
-
-    </div>
-    <div class="object__content">
-
-        <img src="img/img1.jpg" alt="">
-        <img src="img/img1.jpg" alt="">
-        <img src="img/img1.jpg" alt="">
-        <img src="img/img1.jpg" alt="">
-
-    </div>
-
-</div>
-
-
-
-
-<div style="background-color: #000">
-<div class="list__title">My projects</div>
-<div id="list"></div>
-</div>
-</div>
-
-
-
-
-
-<div class="footer">
-   @drogi17
-</div>
-
-
 </body>
 </html>
