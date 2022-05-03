@@ -100,11 +100,20 @@ nav>a:hover {
     font-size: 0.9em;
     text-align: center;
     width: 100px;
-    color: #bf616a;
+    color: #D08770;
 }
 
 .container a:hover {
     text-decoration: none;
+}
+
+.container p {
+    font-size: 0.6em;
+    margin: 0;
+    margin-bottom: 15px;
+    /* text-align: center; */
+    /* width: 100px; */
+    color: #D8DEE9;
 }
 
 .container>div {
@@ -116,7 +125,6 @@ nav>a:hover {
     margin-top: 2em;
     min-width: 300px;
     max-width: 100%;
-    font-size: 33px;
 }
 
 
