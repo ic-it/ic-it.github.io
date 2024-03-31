@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import PageLayout from "./PageLayout.astro";
 import TableOfContents from "../components/TableOfContents.svelte";
 import PublicationDate from "../components/PublicationDate.astro";
+import Comments from "../components/Comments.svelte";
 ---
 
 <PageLayout {title} {description} ogImage={cover.src} >
@@ -20,5 +21,7 @@ import PublicationDate from "../components/PublicationDate.astro";
       >Edit this page</a
     >
   </Fragment>
-  <slot />
+  <slot /> 
+
+  <Comments client:only="svelte" />
 </PageLayout>
