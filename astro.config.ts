@@ -5,13 +5,16 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://aurora.thilohohlt.com",
+  site: "https://ic-it.github.io",
   compressHTML: true,
   scopedStyleStrategy: "class",
   image: {
     service: squooshImageService(),
   },
   markdown: {
+    remarkPlugins: [
+      "remark-math"
+    ],
     rehypePlugins: [
       rehypeHeadingIds,
       [
@@ -22,6 +25,12 @@ export default defineConfig({
             class: "heading-linker",
           },
         },
+      ],
+      [
+        'rehype-katex',
+        {
+          // Katex plugin options
+        }
       ],
     ],
   },
