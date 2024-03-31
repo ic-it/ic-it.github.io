@@ -87,7 +87,7 @@ opposite direction. But this is where we face the problem of
 the twists and turns.
 
 ### Better approach
-I propose a different approach. Let's view the board from a new perspective.
+I propose a simpler solution.
 
 Previously, I described the path that a player moves along as a 
 'row'. This path is homeomorphic to a circle. The player can 
@@ -97,7 +97,7 @@ Suppose our board is of size $x \times x$ (where $x$ is an odd,
 positive number). Then, the length of the path is $4 * (x-1)$.
 
 The starting position for the first player is $0 * (x-1) = 0$, 
-while the positions for the second, third, and fourth players 
+positions for the second, third, and fourth players 
 are $1 * (x-1)$, $2 * (x-1)$, and $3 * (x-1)$ respectively.
 
 We can easily calculate a player's next position as follows:   
@@ -107,97 +107,15 @@ When a player collides with another, set another's player
 position to the spawn:  
 $player.position = player.color * (board.size - 1)$
 
-If a player's position exceeds $4 * (board.size - 1)$ it is in
-the finish area. Players position on the bord and finish area are:
+If a player's position exceeds his spawn point $-1$ it is in
+the finish area (or home area). So representation of home can be various.
+For example, we can set player's position to the negative number 
+(the specific implementation is not important in this example, 
+the main thing is that the players do not collide)
 
-* $player.position \mod (4 * (board.size - 1))$
-* $player.position - (4 * (board.size - 1))$  
-
-When a player is in the finish area, they can only move forward 
-and other players cannot collide with them. 
+When a player is in the finish area, they can only move forward.
 
 The finish area's length is $\frac{x-1}{2} - 1$. 
-If a player's position is greater than
-$4 * (board.size - 1) + \frac{x-1}{2} - 1$, they win the game.
 
-## Time to code!
-Enums:
-```go
-type Color int
-
-const (
-    Red Color = 1 + iota
-    Green
-    Yellow
-    Blue
-)
-```
-
-Player struct:
-```go
-type Player struct {
-    color Color
-    position int
-}
-```
-
-Board struct:
-```go
-type Board struct {
-    players []*Player
-    size int
-}
-```
-
-Board constructor:
-```go
-func NewBoard(size int) *Board {
-    return &Board{
-        players: make([]*Player, 4),
-        size: size,
-    }
-}
-```
-
-Board methods:
-```go
-func (b *Board) AddPlayer(player *Player) {
-    b.players[player.color - 1] = player
-}
-
-func (b *Board) GetPlayerSpawnPosition(player *Player) int {
-    return player.color * (b.size - 1)
-}
-
-func (b *Board) MovePlayer(player *Player, steps int) {
-    player.position += steps
-    for _, p := range b.players {
-        if p == player {
-            continue
-        }
-        if b.IsPlayerInFinishArea(p) {
-            continue
-        }
-        if p.position == player.position {
-            p.position = b.GetPlayerSpawnPosition(p)
-        }
-    }
-}
-
-func (b *Board) GetPlayerInBoardPosition(player *Player) int {
-    return player.position % (4 * (b.size - 1))
-}
-
-func (b *Board) GetPlayerInFinishAreaPosition(player *Player) int {
-    return player.position - (4 * (b.size - 1))
-}
-
-func (b *Board) IsPlayerInFinishArea(player *Player) bool {
-    return player.position >= 4 * (b.size - 1)
-}
-
-func (b *Board) IsPlayerWin(player *Player) bool {
-    return player.position >= 4 * (b.size - 1) + (b.size - 1) / 2 - 1
-}
-```
-
+## Conclusion
+Anyway, which variant you choose is up to you. I think I've explained simply enough how I see modeling this game.
