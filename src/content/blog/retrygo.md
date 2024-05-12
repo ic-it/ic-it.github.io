@@ -97,8 +97,8 @@ Results you can find in the [benchmarks-results](https://gist.github.com/ic-it/9
 - **BenchmarkDoRecovery**: Memory O(n), Time O(n)
 
 #### avast-retry-go
-- **BenchmarkDo**: Memory O(n), Time O(n)
-- **BenchmarkDoWithData**: Memory O(n), Time O(n)
+- **BenchmarkDo**: Memory O($n^2$), Time O(n)
+- **BenchmarkDoWithData**: Memory O($n^2$), Time O(n)
 - **BenchmarkDoSuccess**: Memory O(1), Time O(n)
 - **BenchmarkDoWithDataSuccess**: Memory O(1), Time O(n)
 
