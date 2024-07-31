@@ -198,7 +198,9 @@ function and method signatures within Python code. They leverage Python’s type
 hinting system to ensure that functions and methods interact correctly, 
 reducing the risk of runtime errors and improving code reliability. By 
 incorporating these decorators into your codebase, you can achieve better type 
-safety and maintainability.
+safety and maintainability in situations where other approaches might fall short
+or be too cumbersome and verbose. I realize that the more reliable way is to 
+stupidly duplicate signatures, but sometimes that can be quite inconvenient.
 
 Happy coding, and may your functions always match their methods!
 
