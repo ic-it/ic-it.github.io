@@ -7,7 +7,7 @@ description: "In the world of Python, type safety and correctness are critical f
 layout: '../../layouts/MarkdownLayout.astro'
 ---
 
-### Introduction
+# Introduction
 
 In the world of Python, type safety and correctness are critical for 
 developing robust software. Python’s dynamic nature can sometimes lead to bugs 
@@ -20,7 +20,7 @@ and why they are beneficial.
 
 Full code example can be found [here](https://gist.github.com/ic-it/481f9f64d8db5d2e010ef51772268248)
 
-### The Problem: Matching Function and Method Signatures
+# The Problem: Matching Function and Method Signatures
 
 When working with higher-order functions, method wrappers, or code that 
 involves multiple function calls, it is essential to ensure that the functions 
@@ -32,13 +32,13 @@ to call a standalone function or another method. If the method signature
 changes or is mismatched, it can lead to runtime errors that are hard to 
 pinpoint. To prevent this, we can use decorators that enforce matching argument lists.
 
-### The Solution: Argument Matching Decorators
+# The Solution: Argument Matching Decorators
 
 In Python, we can leverage type hinting to ensure that function and method 
 signatures align properly using argument-matching decorators. Here’s a look at 
 four such decorators:
 
-#### 1. `match_args_mm`
+## 1. `match_args_mm`
 
 This decorator is used to match the argument lists of two methods within the 
 same class. It ensures that one method has the same arguments as another method.
@@ -56,7 +56,7 @@ class Test:
 
 In this example, `test4` must have the same arguments as `test3`.
 
-#### 2. `match_args_ff`
+## 2. `match_args_ff`
 
 This decorator is used to match the argument lists of two functions. It 
 ensures that the arguments of one function match those of another function.
@@ -73,7 +73,7 @@ def test2(*args: typing.Any, **kwargs: typing.Any) -> str:
 
 Here, `test2` must match the argument signature of `test1`.
 
-#### 3. `match_args_fm`
+## 3. `match_args_fm`
 
 This decorator helps match the arguments of a function with those of a method. 
 It is useful when you want to ensure that a method's arguments align with a 
@@ -92,7 +92,7 @@ class Test:
 
 In this case, `test5`’s arguments must align with `test1`.
 
-#### 4. `match_args_mf`
+## 4. `match_args_mf`
 
 This decorator is used to match the arguments of a method with a function. It 
 ensures that a function's signature is compatible with a method's signature.
@@ -110,12 +110,12 @@ def test6(*args: typing.Any, **kwargs: typing.Any) -> str:
 
 With `test6`, we ensure that the function's arguments match those of `Test.test3`.
 
-### How These Decorators Work
+# How These Decorators Work
 
 Let's look at the most complicated decorator, since the others work on 
 roughly the same principle.
 
-#### Understanding `match_args_mm`
+## Understanding `match_args_mm`
 
 Here’s the `match_args_mm` decorator in its full glory:
 
@@ -176,7 +176,7 @@ arguments and swap just the rest of the arguments between the two methods.
 So using the `typing.Concatenate` type hint, we can achieve this. You can find
 `typing.Concatenate` described in the [Python documentation](https://docs.python.org/3/library/typing.html#typing.Concatenate).
 
-### Benefits of Using Argument Matching Decorators
+# Benefits of Using Argument Matching Decorators
 
 1. **Enhanced Type Safety**: By ensuring that function and method signatures 
     are consistent, these decorators help catch potential mismatches early 
@@ -191,7 +191,7 @@ So using the `typing.Concatenate` type hint, we can achieve this. You can find
 4. **Integration with Type Checkers**: Tools like `mypy` can leverage these 
     type hints to perform static type checking, improving overall code quality.
 
-### Conclusion
+# Conclusion
 
 Argument-matching decorators offer a powerful way to enforce consistency in 
 function and method signatures within Python code. They leverage Python’s type 
