@@ -202,7 +202,7 @@ safety and maintainability in situations where other approaches might fall short
 or be too cumbersome and verbose. I realize that the more reliable way is to 
 stupidly duplicate signatures, but sometimes that can be quite inconvenient.
 
-Happy coding, and may your functions always match their methods!
+Happy coding!
 
 ---
 
